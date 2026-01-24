@@ -1,0 +1,81 @@
+/* 1. ПОЛНЫЙ СБРОС ФОНОВ ДЛЯ ВСЕХ РЯДОВ СПИСКА (УБИВАЕМ КВАДРАТ) */
+list, 
+row, 
+.notification-row, 
+.notification-row:hover, 
+.notification-row:selected, 
+.notification-row:active,
+.notification-background,
+.notification-background:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. ОСНОВНОЕ ОКНО ПАНЕЛИ */
+.control-center {
+    background: rgba(17, 17, 17, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 15px !important;
+    margin: 10px !important;
+    color: #e0e0e0 !important;
+}
+
+/* 3. САМА КАРТОЧКА УВЕДОМЛЕНИЯ (ТОЛЬКО ОНА ДОЛЖНА ИМЕТЬ ФОН) */
+.notification {
+    background: rgba(30, 30, 30, 1) !important; /* Чистый темный фон */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    margin: 10px !important; /* Увеличил отступы, чтобы она "парила" */
+    padding: 12px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 4. КНОПКИ ДЕЙСТВИЙ (Mark as read и т.д.) */
+.notification-action {
+    background: #252525 !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    margin: 8px 4px !important;
+}
+
+.notification-action:hover {
+    background: #444444 !important;
+}
+
+/* 5. ВИДЖЕТЫ (Заголовок, Кнопка Очистить) */
+.widget-title > button {
+    background: #252525 !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    padding: 5px 12px !important;
+}
+
+.widget-title > button:hover {
+    background: #f38ba8 !important;
+    color: #111111 !important;
+}
+
+/* 6. ПЕРЕКЛЮЧАТЕЛЬ DND (Не беспокоить) */
+.widget-dnd > switch {
+    background: #252525 !important;
+    border-radius: 15px !important;
+}
+
+.widget-dnd > switch:checked {
+    background: #f38ba8 !important;
+}
+
+/* 7. ТЕКСТ */
+.summary {
+    font-family: "JetBrainsMono Nerd Font", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.body {
+    font-family: "JetBrainsMono Nerd Font", sans-serif !important;
+    font-size: 12px !important;
+}
