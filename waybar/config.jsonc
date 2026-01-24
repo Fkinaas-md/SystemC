@@ -1,0 +1,66 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/language"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "memory", "cpu", "battery", "tray", "custom/notification", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "hyprland/language": {
+        "format": "{} 󰌌",
+        "format-en": "US",
+        "format-ru": "RU"
+    },
+
+    "clock": {
+        "format": "{:%H:%M | %d %b}", 
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    },
+
+    "memory": { "format": "{used:0.1f}G 󰍛" },
+    "cpu": { "format": "{usage}% " },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󱅫",
+            "dnd-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "nwg-bar" 
+    },
+
+    "tray": { "icon-size": 15, "spacing": 8 }
+}

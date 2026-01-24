@@ -1,0 +1,43 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces, #language, #clock, #pulseaudio, #memory, #cpu, #battery, #tray, #custom-notification, #custom-power {
+    background-color: rgba(17, 17, 17, 0.9);
+    color: #e0e0e0;
+    padding: 2px 10px;
+    margin: 3px 1px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+#workspaces button {
+    padding: 0 4px;
+    color: #555555;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background-color: #252525;
+}
+
+#clock {
+    color: #ffffff; /* Белые часы */
+}
+
+#custom-power {
+    color: #f38ba8;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+#custom-power:hover {
+    background-color: #f38ba8;
+    color: #111111;
+}
