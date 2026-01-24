@@ -1,0 +1,88 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: "";
+    drun-display-format: "{name}";
+    font: "JetBrains Mono 11";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Новая палитра: более серая */
+    bg: #1a1a1a;         /* Темно-серый фон */
+    bg-alt: #242424;     /* Чуть светлее для выделения */
+    fg: #dcdcdc;         /* Светло-серый текст (мягче для глаз) */
+    accent: #404040;     /* Чуть более насыщенный красный для контраста с серым */
+    border-col: #2e2e2e; /* Заметная серая рамка */
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 480px;
+    height: 700px;
+    border: 2px;
+    border-color: @border-col;
+    border-radius: 12px;
+    background-color: @bg;
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg;
+    padding: 12px;
+    border: 0 0 1px 0;
+    border-color: @border-col;
+}
+
+prompt {
+    padding: 0 10px 0 5px;
+    text-color: @accent;
+}
+
+entry {
+    placeholder: "(◕‿◕)";
+    placeholder-color: #555555;
+}
+
+listview {
+    padding: 8px;
+    columns: 1;
+    lines: 14;
+    fixed-height: false;
+}
+
+element {
+    padding: 5px 10px;
+    spacing: 12px;
+    border-radius: 6px;
+}
+
+element-icon {
+    size: 22px;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+/* Элемент при наведении или выборе */
+element selected {
+    background-color: @bg-alt; /* Подсвечиваем серым */
+    text-color: @fg;
+    border: 0 0 0 4px;        /* Тонкая красная полоска слева */
+    border-color: @accent;
+}
+
+element-text selected {
+    font: "JetBrains Mono Bold 11";
+}
