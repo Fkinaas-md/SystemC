@@ -8,7 +8,7 @@
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["cpu", "clock", "memory"],
+    "modules-center": ["memory", "clock", "clock"],
     "modules-right": ["hyprland/language","pulseaudio", "battery","custom/notification","tray", "custom/power"],
 
     "hyprland/workspaces": {
