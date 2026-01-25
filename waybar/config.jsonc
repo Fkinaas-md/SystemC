@@ -7,9 +7,9 @@
     "margin-right": 10,
     "spacing": 4,
 
-    "modules-left": ["hyprland/workspaces", "hyprland/language"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "memory", "cpu", "battery", "tray", "custom/notification", "custom/power"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["cpu", "clock", "memory"],
+    "modules-right": ["hyprland/language","pulseaudio", "battery","custom/notification","tray", "custom/power"],
 
     "hyprland/workspaces": {
         "format": "{name}",
