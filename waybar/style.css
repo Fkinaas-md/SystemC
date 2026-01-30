@@ -1,145 +1,74 @@
-/* -----------------------------------------------------
- * Глобальные настройки
- * ----------------------------------------------------- */
 
 * {
-    /* Основной шрифт - JetBrains Mono выглядит лучше всего для цифр */
-    font-family: "JetBrains Mono", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: "JetBrainsMono Nerd Font", "monospace";
     font-size: 13px;
     font-weight: bold;
     border: none;
     border-radius: 0;
-    min-height: 0;
 }
 
-/* Сама подложка панели — делаем её полностью прозрачной */
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
-    color: #d1d1d1;
+    background-color: transparent;
 }
 
-/* -----------------------------------------------------
- * Базовый стиль для всех модулей (Островки)
- * ----------------------------------------------------- */
 
 #workspaces,
+#custom-nvidia,
 #memory,
-#clock,
 #cpu,
-#language,
+#custom-cpu_temp,
 #pulseaudio,
-#battery,
-#custom-notification,
+#language,
+#clock,
 #tray,
 #custom-power {
-    background-color: #111111; /* Тот самый глубокий темно-серый */
-    color: #d1d1d1;
-    border-radius: 10px;       /* Скругление углов */
-    margin: 4px 3px;           /* Отступы между островками */
-    padding: 0 12px;           /* Внутренние отступы по бокам */
+    background-color: #242424; 
+    color: #ffffff;
+    border-radius: 10px;
     
-    /* Фиксация высоты для идеального выравнивания */
-    min-height: 24px;
-    border: 1px solid #1a1a1a; /* Тонкая кайма для объема */
+    margin: 4px 2px;
+    padding: 0 12px;
+    min-height: 28px;
 }
 
-/* -----------------------------------------------------
- * Модуль рабочих столов (Workspaces)
- * ----------------------------------------------------- */
-
-#workspaces {
-    padding-left: 5px;
-    padding-right: 5px;
-}
 
 #workspaces button {
-    color: #444444;            /* Цвет неактивных цифр */
-    padding: 0 6px;
-    margin: 2px 0;
-    transition: all 0.2s ease;
+    color: #666666;
+    min-width: 32px; 
+    padding: 0;
 }
 
 #workspaces button.active {
-    color: #ffffff;            /* Цвет активной цифры */
-    background-color: #222222; /* Чуть более светлый фон для активного стола */
-    border-radius: 7px;
-}
-
-#workspaces button:hover {
-    background-color: #2a2a2a;
     color: #ffffff;
+    background-color: #383838;
+    border-radius: 1px;
 }
 
-#workspaces button.urgent {
-    color: #f38ba8;            /* Цвет, если на столе что-то важное */
-}
 
-/* -----------------------------------------------------
- * Специфические настройки модулей
- * ----------------------------------------------------- */
+#custom-nvidia { margin-right: 1px; }
+#memory { margin-left: 1px; margin-right: 1px; }
+#cpu { margin-left: 1px; margin-right: 1px; }
+#custom-cpu_temp { margin-left: 1px; }
 
-/* Часы по центру */
+
+#language { color: #aaaaaa; }
+
 #clock {
-    color: #ffffff;
+    background-color: #2b2b2b;
 }
 
-/* Кнопка уведомлений */
-#custom-notification {
-    padding: 0 10px;
-    font-size: 15px;
-}
-
-/* Системный трей */
 #tray {
     padding: 0 10px;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-}
-
-/* Кнопка питания (крайняя справа) */
 #custom-power {
-    color: #f38ba8;            /* Делаем иконку питания красноватой */
+    background-color: #333333;
+    color: #ffffff;
     padding: 0 14px;
-    margin-right: 10px;        /* Доп. отступ от края экрана */
+    margin-right: 5px; 
 }
-
-/* Модуль звука */
-#pulseaudio {
-    color: #d1d1d1;
-}
-
-/* Модуль батареи */
-#battery {
-    color: #a6e3a1;            /* Сделаем батарею чуть зеленоватой */
-}
-
-#battery.warning {
-    color: #fab387;
-}
-
-#battery.critical {
-    color: #f38ba8;
-}
-
-/* -----------------------------------------------------
- * Исправление для кнопок внутри Waybar (убираем тени)
- * ----------------------------------------------------- */
 button {
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+    box-shadow: none;
     text-shadow: none;
-    transition: all 0.3s ease;
-}
-
-#workspaces button {
-    transition: all 0.3s ease-in-out; /* Плавная смена цвета */
-}
-
-#workspaces button.active {
-    transition: all 0.3s ease-in-out;
 }
